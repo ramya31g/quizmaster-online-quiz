@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster | Auspify Task 4</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="#" class="brand">🧠 Quiz<span>Master</span></a>
+    <div class="nav-right">
+        
+        <button id="theme-btn" class="theme-btn">🌙</button>
+    </div>
+</header>
+
+<main class="app-container">
+
+    <!-- HOME SCREEN -->
+    <section id="welcome-screen" class="screen active">
+
+        <div class="hero">
+            <div class="hero-content">
+                <span class="small-label">✨ LEARN • PLAY • GROW</span>
+                <h1>Ready to Test<br>Your <span>Skills?</span></h1>
+                <p>Choose your favourite category, answer exciting questions and become a Quiz Champion!</p>
+
+                <input type="text" id="username"
+                    placeholder="👤 Enter your name">
+
+                <p class="choose-heading">Choose Your Category</p>
+            </div>
+
+            <div class="hero-art">
+                <div class="hero-emoji">🎓</div>
+                <h2>Think Smart.<br>Play Better!</h2>
+                <p>Every question makes you smarter.</p>
+                <div class="floating-emoji">💡 ⭐ 🚀</div>
+            </div>
+        </div>
+
+        <div class="category-grid">
+
+            <button class="category-card science" data-category="Science">
+                <span class="category-icon">🔬</span>
+                <h3>Science</h3>
+                <p>Explore & Discover</p>
+                <span class="question-total">8 Questions →</span>
+            </button>
+
+            <button class="category-card computer" data-category="Computer">
+                <span class="category-icon">💻</span>
+                <h3>Computer</h3>
+                <p>Technology & Coding</p>
+                <span class="question-total">8 Questions →</span>
+            </button>
+
+            <button class="category-card games" data-category="Games">
+                <span class="category-icon">🎮</span>
+                <h3>Games</h3>
+                <p>Play & Challenge</p>
+                <span class="question-total">8 Questions →</span>
+            </button>
+
+            <button class="category-card general" data-category="General Knowledge">
+                <span class="category-icon">🌍</span>
+                <h3>General Knowledge</h3>
+                <p>Know More About the World</p>
+                <span class="question-total">8 Questions →</span>
+            </button>
+
+            <button class="category-card movies" data-category="Movies & TV">
+                <span class="category-icon">🎬</span>
+                <h3>Movies & TV</h3>
+                <p>Lights, Camera, Action!</p>
+                <span class="question-total">8 Questions →</span>
+            </button>
+
+            <button class="category-card sports" data-category="Sports">
+                <span class="category-icon">🏆</span>
+                <h3>Sports</h3>
+                <p>Play Like a Champion</p>
+                <span class="question-total">8 Questions →</span>
+            </button>
+
+        </div>
+
+        <div class="home-footer">
+            Made with ❤️ for curious minds | QuizMaster
+        </div>
+    </section>
+
+
+    <!-- QUIZ SCREEN -->
+    <section id="quiz-screen" class="screen">
+
+        <div class="quiz-card">
+
+            <div class="quiz-top">
+                <div>
+                    <span class="small-label">YOUR QUIZ SESSION</span>
+                    <h2>🧠 QuizMaster</h2>
+                </div>
+                <span id="quiz-category" class="quiz-category">Science</span>
+                <div class="timer">⏱ <span id="timer">30</span>s</div>
+            </div>
+
+            <div class="progress-info">
+                <span id="question-count">Question 1 of 8</span>
+                <span id="progress-percent">12%</span>
+            </div>
+
+            <div class="progress-bar">
+                <div id="progress-fill"></div>
+            </div>
+
+            <div class="question-area">
+                <span class="question-number" id="question-number">QUESTION 01</span>
+                <h2 id="question">Your question will appear here</h2>
+                <div id="options-container" class="options-container"></div>
+                <p id="feedback"></p>
+            </div>
+
+            <div class="quiz-buttons">
+                <button id="previous-btn" class="secondary-btn">← Previous</button>
+                <button id="next-btn" class="main-btn">Next Question →</button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- RESULT SCREEN -->
+    <section id="result-screen" class="screen">
+
+        <div class="result-card">
+            <div class="result-icon">🏆</div>
+            <span class="small-label">QUIZ FINISHED</span>
+            <h1>Congratulations!</h1>
+            <p id="result-message">Amazing performance!</p>
+            <h3 id="result-user"></h3>
+
+            <div class="score-circle">
+                <h2 id="final-score">0/8</h2>
+                <p id="percentage">0%</p>
+            </div>
+
+            <div class="result-details">
+                <div class="result-stat correct-stat">
+                    <span>✅</span>
+                    <h2 id="correct-count">0</h2>
+                    <p>Correct</p>
+                </div>
+                <div class="result-stat wrong-stat">
+                    <span>❌</span>
+                    <h2 id="wrong-count">0</h2>
+                    <p>Incorrect</p>
+                </div>
+            </div>
+
+            <div class="result-buttons">
+                <button id="restart-btn" class="main-btn">↻ Play Again</button>
+                <button id="home-btn" class="secondary-btn">⌂ Home</button>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
